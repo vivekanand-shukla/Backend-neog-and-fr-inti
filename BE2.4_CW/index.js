@@ -16,6 +16,7 @@ director: "Aditya Roy Chopra",
     posterUrl: "https://example.com/new-poster1.jpg",
     trailerUrl: "https://example.com/new-trailer1.mp4"
   }
+// Create
 async function createMovie(newMovie){
      try{
         const movie = new Movie(newMovie)
@@ -28,7 +29,7 @@ async function createMovie(newMovie){
 
  }
 //  createMovie(newMovie)
-
+//read
 async function  readMovieByTitle(movieTitle){
   try{
   const movie =  await   Movie.findOne({title : movieTitle})
@@ -69,7 +70,7 @@ async function ReadMovieByDirector(directorName){
 }
 // ReadMovieByDirector('Kabir Khan')
 
-//find a movie by its id and update its rating
+// update 
 
 async function updateMovie(movieId, dataToUpdate){
 try{
@@ -95,6 +96,8 @@ try{
 }
 
 // updateMovieDettail('Kabhi Khushi Kabhie Gham' ,{realeseYear:2001})
+
+// delete
 async function deleteMovie(movieID ,){
    try {
     const deleteMovie = await Movie.findByIdAndDelete(movieID)
